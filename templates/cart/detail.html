@@ -29,7 +29,7 @@
                     </td>
                     <td>{{product.name}}</td>
                     <td>
-                        <form action="{% url 'cart:cart_add' product.id %}" method="POST">
+                        <form action="{% url 'cart:add' product.id %}" method="POST">
                             {{item.update_quantity_form.quantity}}
                             {{item.update_quantity_form.override}}
                             <input class="btn btn-primary" type="submit" value="Update">
@@ -37,7 +37,7 @@
                         </form>
                     </td>
                     <td>
-                        <form action="{% url 'cart:cart_remove' product.id %}" method="POST">
+                        <form action="{% url 'cart:remove' product.id %}" method="POST">
                             <button type="submit" class="btn"><i class="fas fa-trash"></i></button>
                             {% csrf_token %}
                         </form>
