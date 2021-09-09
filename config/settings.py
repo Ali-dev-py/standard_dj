@@ -43,6 +43,10 @@ INSTALLED_APPS = [
     'cart.apps.CartConfig',
 ]
 
+# by default sessions stores on db otherwise we must to set SESSION_ENGINE
+# SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+CART_SESSION_ID = 'cart'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
